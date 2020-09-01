@@ -1,9 +1,18 @@
-// Apply a natural box layout model to all elements
-// but allowing components to change
-// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'components/nav.scss';
+@import "components/header.scss";
+
 html {
     box-sizing: border-box;
+    font-size: 16px;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
+

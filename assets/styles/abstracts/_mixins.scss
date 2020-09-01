@@ -1,0 +1,73 @@
+@mixin big-header($color) {
+   font-family: $minor-font;
+   font-weight: 700;
+   font-size: 70px;
+   color: $color;
+}
+
+@mixin description-header {
+    font-family: $main-font;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@mixin h2-header {
+    font-family: $minor-font;
+    color: $text-color;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+@mixin h3-header {
+    font-family: $minor-font;
+    color: $text-color;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+@mixin h4-header {
+    font-family: $main-font;
+    font-weight: 400;
+    color: $text-color;
+    font-size: 17px;
+}
+
+@mixin pharagraph-text {
+    font-family: $main-font;
+    color: $text-color;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+@mixin button {
+    background-color: $product-color;
+    font-family: $main-font;
+    font-size: 17px;
+}
+
+@mixin list-item($color) {
+    font-family: $minor-font;
+    color: $color;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+@mixin tabs($font-weight) {
+    font-family: $main-font;
+    font-weight: $font-weight;
+    color: $text-color;
+    font-size: 17px;
+}
+
+@mixin input-label {
+    font-family: $main-font;
+    font-size: 13px;
+    color: $text-color;
+}
+
+@mixin input-text {
+    font-family: $main-font;
+    font-size: 30px;
+    color: $main-color;
+}

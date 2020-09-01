@@ -19,8 +19,13 @@ module.exports = {
         vendor: [
             'lodash'
         ],
-        bundle: path.join(dirApp, 'index')
+        bundle: path.join(dirApp, 'index'),
     },
+    output: {
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/',
+    },
+
     resolve: {
         modules: [
             dirNode,
@@ -34,8 +39,10 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'index.html'),
-            title: appHtmlTitle
+            template: path.join(__dirname, 'app/index.html'),
+            filename: 'index.html',
+            title: appHtmlTitle,
+            chunks: ['vendor', 'bundle']
         })
     ],
     module: {
