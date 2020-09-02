@@ -1,0 +1,41 @@
+.target {
+    background-color: $background-color;
+    display: flex;
+}
+
+.option{
+    &__header {
+        @include h2-header;
+    }
+
+    &__description {
+        @include pharagraph-text;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .target {
+        padding: $small;
+        flex-direction: column;
+    }
+
+    .option {
+        display: none;
+        padding: $medium 0;
+
+        &__header {
+            padding-bottom: $medium;
+        }
+
+        &__description {
+            @include pharagraph-text;
+        }
+    }
+}
+
+.active {
+    display: block;
+}
+
+
+

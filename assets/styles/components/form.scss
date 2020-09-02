@@ -1,0 +1,17 @@
+.form{
+    &__contact__button {
+        @include button;
+        display: flex;
+
+    }
+
+    @media only screen and (max-width: 480px) {
+        .form {
+            border: 1px solid red;
+
+            &__contact__button {
+                flex-direction: column;
+            }
+        }
+    }
+}

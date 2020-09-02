@@ -1,0 +1,36 @@
+.features {
+
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $background-color;
+}
+
+@media only screen and (max-width: 480px) {
+    .feature {
+        &__header {
+            @include h3-header;
+            padding: $small;
+        }
+
+        &__image {
+            width: 11px;
+            height: 6px;
+            margin-right: $small;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .feature-active {
+        p {
+            visibility: block;
+        }
+    }
+
+}

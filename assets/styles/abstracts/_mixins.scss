@@ -44,6 +44,10 @@
     background-color: $product-color;
     font-family: $main-font;
     font-size: 17px;
+    border: none;
+    width: 200px;
+    height: 60px;
+    color: white;
 }
 
 @mixin list-item($color) {
@@ -70,4 +74,16 @@
     font-family: $main-font;
     font-size: 30px;
     color: $main-color;
+}
+
+@mixin pin {
+    opacity: 1;
+    background-color: $text-color;
+    border-radius: 100%;
+    width: 7px;
+    height: 7px;
+    position: relative;
+    left: -30px;
+    border: none;
+    margin-left: $x-small;
 }

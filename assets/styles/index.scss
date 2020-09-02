@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
 
+@import "base/global.scss";
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'components/nav.scss';
 @import "components/header.scss";
+@import "components/target.scss";
+@import "components/card.scss";
+@import "components/slides.scss";
+@import "components/features.scss";
+@import "components/ecosystem.scss";
+@import "components/store.scss";
+@import "components/form.scss";
+@import "components/pins.scss";
 
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-}
 
-*, *:before, *:after {
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
-}
 

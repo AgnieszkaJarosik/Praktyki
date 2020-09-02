@@ -1,0 +1,53 @@
+.cards {
+    background-color: $background-color;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    &__description {
+        @include h4-header;
+        padding: $medium $small;
+    }
+}
+
+.card {
+    padding: $large;
+    background-color: white;
+    width: 360px;
+    margin: 0 $x-small;
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: $large;
+    }
+
+    &__header {
+        @include h3-header;
+        padding: $small 0;
+    }
+
+    &__description {
+        @include pharagraph-text;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        display: none;
+        padding: $small;
+        margin: 0;
+
+
+        &__header {
+            padding: $small 0;
+        }
+    }
+}
+
+.active {
+    display: block;
+}

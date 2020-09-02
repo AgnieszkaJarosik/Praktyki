@@ -1,40 +1,49 @@
 .header {
     background-color: $background-color;
-}
-
-.header__description {
-    @include description-header;
-}
-
-.header__container {
-    background-image: url("../images/desks.png");
-    background-position: bottom;
-    background-size: cover;
     display: flex;
-    justify-content: center;
 
-    img {
-        height: 350px;
-        width: auto;
-    }
-}
-
-.header__second-description {
-    @include h4-header;
-    padding: $large $small;
-}
-
-@media only screen and (max-width: 480px) {
-    h1 {
+    &__main-header {
         @include big-header($product-color);
-        font-size: 39px;
+    }
+
+    &__description {
+        @include description-header;
+    }
+
+    &__container {
+        background-image: url("../images/desks.png");
+        background-position: bottom;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 350px;
+            width: auto;
+        }
+    }
+
+    &__second-description {
+        @include h4-header;
         padding: $large $small;
     }
 
-    .header__description {
-        padding: $medium $small;
-        font-size: 22px;
-        line-height: 32px;
-    }
+    @media only screen and (max-width: 480px) {
+        & {
+            display: block;
+        }
 
+        &__main-header {
+            font-size: 39px;
+            padding: $large $small;
+        }
+
+        &__description {
+            padding: $medium $small;
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
 }
+
+

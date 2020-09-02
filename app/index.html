@@ -8,14 +8,19 @@
 <body>
     <menu class="navbar">
         <nav class="navbar__main">
-            <img  class="navbar__logo--image" src="<%= require('../assets/images/logo-mobile.png') %>">
+            <img  class="navbar__logo-image" src="<%= require('../assets/images/logo-mobile.png') %>">
             <div class="navbar__hamburger-container">
                 <img class="navbar__hamburger" src="<%= require('../assets/images/ex_logo2.png') %>" >
                 <input type="checkbox">
             </div>
-<!--            <ul>-->
-<!--                <li></li>-->
-<!--            </ul>-->
+            <ul class="main-nav__items">
+                <li>Zonifero products</li>
+                <li>Store</li>
+                <li>Blog</li>
+                <li><img src="<%= require('../assets/images/globe.png') %>"></li>
+                <li>Sign in</li>
+                <li>Get the app</li>
+            </ul>
         </nav>
         <nav class="navbar__minor">
             <p class="navbar__title">zonifero WorkPlace</p>
@@ -23,14 +28,18 @@
                 <img class="navbar__arrow" src="<%= require('../assets/images/down-arrow.png') %>">
                 <input type="checkbox">
             </div>
-                <!--            <ul>-->
-                <!--                <li></li>-->
-                <!--            </ul>-->
+            <ul class="minor-nav__items">
+                <li>Overview</li>
+                <li>Features</li>
+                <li>Specs</li>
+                <li>FAQ</li>
+                <li>Contact</li>
+            </ul>
         </nav>
     </menu>
     <main>
         <section class="header">
-            <h1>Streamline your workplace</h1>
+            <h1 class="header__main-header">Streamline your workplace</h1>
             <div class="header__container">
                 <img src="<%= require('../assets/images/mob-hand.png') %>">
             </div>
@@ -41,25 +50,208 @@
             </div>
         </section>
         <section class="target">
-            <div>
-                <h2 class="target__header">Management</h2>
-                <p>Tools for ...</p>
-                <div class="pin">.</div>
+            <div class="option active">
+                <h2 class="option__header">Management</h2>
+                <p class="option__description">
+                    Tools for real-time management of all your facilities and people across multiple sites.
+                    Ease, speed and effectiveness of facilities communications.
+                </p>
             </div>
+            <div class="option">
+                <h2 class="option__header">Employees</h2>
+                <p class="option__description">
+                    Improved productivity and satisfaction as your employees stay informed,
+                    connected and can feed requests and updates in real time.
+                </p>
+            </div>
+            <div class="option">
+                <h2 class="option__header">Visitors</h2>
+                <p class="option__description">
+                    A smooth and welcoming visitor experience – easy navigation around your facilities.
+                </p>
+            </div>
+            <ul class="pins">
+                <li><button class="pins--pin pin-active"/></li>
+                <li><button class="pins--pin"/></li>
+                <li><button class="pins--pin"/></li>
+            </ul>
         </section>
         <section class="cards">
-            <h4 class="header__second-description">Problem solving app</h4>
-            <div class="card">
-                <img src="logo.png">
-                <h3>Use your time and space smarter</h3>
-                <p>Never ...</p>
-            </div>
-            <div class="pins">
-                <div class="pin">.</div>
+            <h4 class="cards__description">Problem solving app</h4>
+            <div class="cards__container">
+                <div class="card active">
+                    <img class="card__image" src="<%= require('../assets/images/desk_icon.png') %>">
+                    <h3 class="card__header">Use your time and space smarter</h3>
+                    <p class="card__description">
+                        Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="<%= require('../assets/images/desk_icon.png') %>">
+                    <h3 class="card__header">Never stress about meetings again</h3>
+                    <p class="card__description">
+                        Zonifero will measure how you use the rooms so that you always have enough rooms available.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="<%= require('../assets/images/desk_icon.png') %>">
+                    <h3 class="card__header">Find the right person in a breeze</h3>
+                    <p class="card__description">
+                        Can’t keep track of your peers in large office space? Zonifero can pinpoint their location..
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="<%= require('../assets/images/desk_icon.png') %>">
+                    <h3 class="card__header">Save your desk and room space</h3>
+                    <p class="card__description">
+                        Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.
+                        Zonifero will tell you which desks and rooms are in use and how many and which of them are idle,
+                        so you can make your office more flexible and make the best use of your space.
+                </div>
+                <ul class="pins">
+                    <li><button class="pins--pin pin-active"/></li>
+                    <li><button class="pins--pin"/></li>
+                    <li><button class="pins--pin"/></li>
+                    <li><button class="pins--pin"/></li>
+                </ul>
             </div>
         </section>
         <section class="slides">
-            <h4>Features</h4>
+            <h4 class="slides__header">Features</h4>
+            <div class="slides__content-container">
+                <div class="slides__content__background"></div>
+                <img class="slides__content__image" src="<%= require('../assets/images/mob_mobile.png') %>" >
+                <div class="slides__content__arrows">
+                    <button class="slides__content__arrows--left"></button>
+                    <button class="slides__content__arrows--right"></button>
+<!--                    <button class="slides__c2a slides__c2a&#45;&#45;with-border"></button>-->
+                </div>
+                <div class="slides__content__description">
+                    <h1 class="slides__content__description__header">
+                        Hot desk booking. Like a pro.
+                    </h1>
+                    <p class="slides__content__description__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                        Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                    </p>
+                    <p class="slides__content__description__footer">View and download full specs</p>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <ul class="features__list">
+                <li class="feature">
+                    <div class="feature-container feature-active">
+                        <h3 class="feature__header">Hot-desk booking</h3>
+                        <p class="feature__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                        <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-container">
+                        <h3 class="feature__header">Status of employees</h3>
+                        <p class="feature__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                        <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-container">
+                        <h3 class="feature__header">Request management</h3>
+                        <p class="feature__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                        <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-container">
+                        <h3 class="feature__header">Hot-desk booking</h3>
+                        <p class="feature__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                        <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-container">
+                        <h3 class="feature__header">Status of employees</h3>
+                        <p class="feature__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                        <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-container">
+                        <h3 class="feature__header">Request management</h3>
+                        <p class="feature__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                        <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="ecosystem">
+            <h1 class="ecosystem__header">Zoptymalizuj koszty i ergonomię biura z Zonifero</h1>
+            <p class="ecosystem__description">
+                Zarządzaj świadomie rozwojem biura, optymalizuj koszty związane z usługami i powierzchnią
+                a także podnoś komfort pracy dzięki jednemu systemowi.
+            </p>
+            <img class="ecosystem__image" src="<%= require('../assets/images/mob_devices copy.png') %>">
+            <h2 class="ecosystem__second-header">523%</h2>
+            <p class="ecosystem__pharagraph">
+                Długoterminowe korzyści z wdrożenia Zonifero wynoszą co najmniej 523%* w stosunku do wydanej kwoty.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor sem sit amet purus maximus, eu fringilla orci rhoncus.
+                * Wyliczenia są zależne od lokalizacji biura
+            </p>
+        </section>
+        <section class="store">
+            <h2 class="store__header">Shop zonifero accesories</h2>
+            <p class="store__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim felis id nisl egestas.
+            </p>
+            <img class="store__image" src="<%= require('../assets/images/mob_starter kit.png') %>">
+            <button class="store__button">Contact us</button>
+        </section>
+        <section class="form">
+            <ul class="form__bookmarks">
+                <li class="form__bookmarks--form">Contact form</li>
+                <li class="form__bookmarks--call">Call us</li>
+            </ul>
+            <form class="form__contact">
+                <div class="input-item">
+                    <label class="input-item__label" for="name">First name *</label>
+                    <input class="input-item__field" id="name" type="text" placeholder="John">
+                </div>
+                <div class="input-item">
+                    <label class="input-item__label" for="surname">Family name *</label>
+                    <input class="input-item__field" id="surname" type="text" placeholder="Wick">
+                </div>
+                <div class="input-item">
+                    <label class="input-item__label" for="email">Your email *</label>
+                    <input class="input-item__field" id="email" type="email" placeholder="johnw@hollywood.com">
+                </div>
+                <div class="input-item">
+                    <label class="input-item__label" for="phone">Your phone</label>
+                    <input class="input-item__field" id="phone" type="number" placeholder="+48 605 708 904">
+                </div>
+                <div class="input-item">
+                    <label class="input-item__label" for="message">Message *</label>
+                    <textarea class="input-item__field" id="message" placeholder="Hello :) I’m just wondering if you could.." ></textarea>
+                </div>
+                <button class="form__contact__button">Send message</button>
+            </form>
         </section>
     </main>
 </body>

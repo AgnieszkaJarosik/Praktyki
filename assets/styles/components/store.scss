@@ -1,0 +1,40 @@
+.store {
+    background-color: $background-color;
+
+    &__description {
+        @include pharagraph-text;
+    }
+
+    &__header {
+        @include h2-header;
+    }
+
+    &__button {
+        @include button;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .store {
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            padding: $medium $small;
+        }
+
+        &__description {
+            padding: $small;
+        }
+
+        &__image {
+            align-self: flex-end;
+        }
+
+        &__button {
+            margin: $large;
+            align-self: center;
+        }
+    }
+}

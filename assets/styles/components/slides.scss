@@ -1,0 +1,90 @@
+.slides {
+    background-color: $background-color;
+
+    &__header {
+        @include h4-header;
+        padding: $x-large $small $base $small;
+    }
+
+    &__content__description {
+        background-color: $product-color;
+    }
+
+    &__content__description__header{
+        @include big-header(white);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .slides {
+        &__content__background {
+            height: 360px;
+            background-image: url("../images/mob_features_bg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__content-container {
+            position: relative;
+        }
+
+        &__content__image {
+            position: absolute;
+            top: 70px;
+            left: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__content__arrows {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 340px;
+            width: 100%;
+        }
+
+        &__content__arrows--left {
+            background-image: url("../images/left-arrow.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: none;
+            height: 40px;
+            width: 40px;
+        }
+
+        &__content__arrows--right {
+            background-image: url("../images/right-arrow.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: none;
+            height: 40px;
+            width: 40px;
+        }
+
+        &__content__description__header{
+            @include big-header(white);
+            font-size: 34px;
+            padding: $large $small $small $small;
+        }
+
+        &__content__description__desc{
+            @include pharagraph-text;
+            color: white;
+            padding: $small;
+        }
+
+        &__content__description__footer{
+            @include pharagraph-text;
+            color: white;
+            padding: $small 0;
+            border-top: 0.1px dashed white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

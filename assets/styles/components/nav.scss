@@ -1,39 +1,58 @@
 .navbar {
     height: 210px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding-left: $large;
+    }
+
+    &__minor {
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo-image {
+        position: static;
+        width: 33px;
+        height: 18px;
+    }
+
+    &__hamburger-container {
+        display: none;
+        input {
+            visibility: hidden;
+        }
+    }
+
+    &__arrow-container {
+        input {
+            visibility: hidden;
+        }
+    }
 }
 
-.navbar__main {
+.main-nav__items {
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    padding-left: $large;
+    margin-left: $small;
 }
 
-.navbar__minor {
-    height: 130px;
+.minor-nav__items {
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: $small;
 }
 
-.navbar__logo--image {
-    position: static;
-    width: 33px;
-    height: 18px;
-}
 
-.navbar__hamburger-container {
-    input {
-        visibility: hidden;
-    }
-}
-
-.navbar__arrow-container {
-    input {
-        visibility: hidden;
-    }
-}
 
 @media only screen and (max-width: 480px) {
     .navbar {
@@ -42,41 +61,49 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &__hamburger-container {
+            display: block;
+        }
+
+        &__main {
+            order: 3;
+            padding-left: 0;
+        }
+
+        &__logo-image {
+            widht: 20px;
+            height: 21px;
+            position: absolute;
+            top: $small;
+            left: $small;
+        }
+
+        &__title {
+            font-family: $main-font;
+            font-size: 15px;
+        }
+
+        &__arrow-container {
+            padding-left: $x-small;
+        }
+
+        &__arrow {
+            widht: 11px;
+            height: 6px;
+        }
+
+        &__hamburger {
+            widht: 14px;
+            height: 13px;
+        }
     }
 
-    .navbar__main {
-        order: 3;
-        padding-left: 0;
+    .main-nav__items {
+        display: none;
     }
 
-    .navbar__minor {
-
-    }
-
-    .navbar__logo--image {
-        widht: 20px;
-        height: 21px;
-        position: absolute;
-        top: $small;
-        left: $small;
-    }
-
-    .navbar__title {
-        font-family: $main-font;
-        font-size: 15px;
-    }
-
-    .navbar__arrow-container {
-        padding-left: $x-small;
-    }
-
-    .navbar__arrow {
-        widht: 11px;
-        height: 6px;
-    }
-
-    .navbar__hamburger {
-        widht: 14px;
-        height: 13px;
+    .minor-nav__items {
+        display: none;
     }
 }
