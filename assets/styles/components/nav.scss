@@ -1,5 +1,6 @@
 .navbar {
     height: 210px;
+    background-color: white;
 
     &__main {
         display: flex;
@@ -17,9 +18,13 @@
     }
 
     &__logo-image {
+        background-image: url("../images/logo.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         position: static;
-        width: 33px;
-        height: 18px;
+        height: 25px;
+        width: 127px;
     }
 
     &__hamburger-container {
@@ -30,32 +35,50 @@
     }
 
     &__arrow-container {
+        display: none;
+
         input {
             visibility: hidden;
         }
     }
-}
 
-.main-nav__items {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: $small;
-}
+    &__main__items {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: $small;
+        width: 790px;
+        font-family: Roboto;
+        font-size: 13px;
+    }
 
-.minor-nav__items {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: $small;
-}
+    &__minor__items {
+        @include h4-header;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: $small;
+        width: 850px;
+    }
 
+    @include for-tablet-only {
+        &__main__items {
+            width: 400px;
+        }
 
+        &__logo-image {
+            height: 25px;
+            width: 33px;
+            position: absolute;
+            top: $small;
+            left: $small;
+            background-image: url("../images/logo-mobile.png");
+        }
+    }
 
-@media only screen and (max-width: 480px) {
-    .navbar {
+    @include for-phone-only {
         height: 60px;
         padding: 0 $small 0 $x-large;
         display: flex;
@@ -71,20 +94,13 @@
             padding-left: 0;
         }
 
-        &__logo-image {
-            widht: 20px;
-            height: 21px;
-            position: absolute;
-            top: $small;
-            left: $small;
-        }
-
         &__title {
             font-family: $main-font;
             font-size: 15px;
         }
 
         &__arrow-container {
+            display: block;
             padding-left: $x-small;
         }
 
@@ -97,13 +113,28 @@
             widht: 14px;
             height: 13px;
         }
-    }
 
-    .main-nav__items {
-        display: none;
-    }
+        &__main__items {
+           display: none;
+        }
 
-    .minor-nav__items {
-        display: none;
+        &__minor__items {
+            display: none;
+        }
+    }
+}
+
+.nav-item-active {
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        margin-top: $x-small;
+        display: block;
+        content: "";
+        background-color: #00FFCC;
+        height: 3px;
+        width: 30px;
     }
 }

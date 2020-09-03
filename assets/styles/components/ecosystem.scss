@@ -1,26 +1,42 @@
 .ecosystem {
+    background-color: white;
+
     &__header {
         @include big-header($text-color);
+        padding: $large $small;
     }
 
     &__description {
         @include description-header;
+        padding: $large $small;
     }
 
     &__second-header {
         @include h2-header;
+        padding: $large $small;
     }
 
     &__pharagraph {
         @include pharagraph-text;
+        padding: $large $small;
+    }
+
+    &__image--mob{
+        display: none;
+    }
+
+    &__image--desc {
+        display: block;
     }
 }
 
-@media only screen and (max-width: 480px) {
+@include for-tablet-only {
     .ecosystem {
+        display: flex;
+        flex-direction: column;
+
         &__header {
             font-size: 40px;
-            padding: $large $small;
         }
 
         &__description {
@@ -35,6 +51,14 @@
 
         &__pharagraph {
             padding: 0 $small $x-large $small;
+        }
+
+        &__image--mob{
+            display: block;
+        }
+
+        &__image--desc {
+            display: none;
         }
     }
 }

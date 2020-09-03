@@ -1,26 +1,35 @@
 .header {
-    background-color: $background-color;
     display: flex;
+    flex-direction: column;
+
+    &__container {
+        background-image: url("../images/desks2.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        display: flex;
+        justify-content: space-between;
+        padding-left: $xx-large;
+        height: 500px;
+    }
 
     &__main-header {
         @include big-header($product-color);
+        padding: $base 0;
     }
 
     &__description {
         @include description-header;
+        order: -1;
+        position: relative;
+        top: 450px;
+        width: 50%;
+        padding-left: $xx-large;
     }
 
-    &__container {
-        background-image: url("../images/desks.png");
-        background-position: bottom;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-
-        img {
-            height: 350px;
-            width: auto;
-        }
+    &__image {
+        height: 400px;
+        width: auto;
+        align-self: flex-end;
     }
 
     &__second-description {
@@ -28,20 +37,75 @@
         padding: $large $small;
     }
 
-    @media only screen and (max-width: 480px) {
-        & {
-            display: block;
-        }
+    &__buttons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 440px;
+        order: -1;
+        position: relative;
+        top: 470px;
+        left: $xx-large;
+    }
+
+    &__button {
+        height: 70px;
+        width: 200px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    @include for-tablet-only {
+       &__container {
+           padding-left: 0;
+           background-size: contain;
+       }
 
         &__main-header {
             font-size: 39px;
-            padding: $large $small;
+            padding: $small;
+        }
+
+        &__description {
+            width: 60%;
+            padding-left: 0;
+        }
+
+        &__image {
+            height: 280px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__buttons-container {
+            position: static;
+            order: 0;
+            width: 100%;
+        }
+    }
+
+    @include for-phone-only {
+        display: block;
+        width: 100%;
+
+        &__container {
+            background-position: bottom;
+            overflow: hidden;
+            display: block;
+            padding-left: 0;
         }
 
         &__description {
             padding: $medium $small;
             font-size: 22px;
             line-height: 32px;
+            order: 0;
+            width: 100%;
+            position: static;
+            padding-left: 0;
         }
     }
 }

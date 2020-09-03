@@ -1,5 +1,28 @@
 .features {
+    background-color: white;
+}
 
+.features__list {
+    list-style-type: none;
+    width: 65%;
+    margin: $x-large auto 0 auto;
+}
+
+.feature {
+    &__description {
+        display: none;
+    }
+
+    &__header {
+        @include h3-header;
+        padding: $small;
+    }
+
+    &__image {
+        width: 11px;
+        height: 6px;
+        margin-right: $small;
+    }
 }
 
 .feature-container {
@@ -9,27 +32,21 @@
     border-bottom: 1px solid $background-color;
 }
 
-@media only screen and (max-width: 480px) {
+@include for-tablet-only{
+    .features__list {
+        width: 100%;
+        margin: 0 auto;
+    }
     .feature {
         &__header {
             @include h3-header;
             padding: $small;
         }
-
-        &__image {
-            width: 11px;
-            height: 6px;
-            margin-right: $small;
-        }
-
-        p {
-            display: none;
-        }
     }
 
     .feature-active {
         p {
-            visibility: block;
+            display: block;
         }
     }
 

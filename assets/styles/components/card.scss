@@ -3,7 +3,6 @@
 
     &__container {
         display: flex;
-        flex-direction: column;
         background-color: white;
     }
 
@@ -11,12 +10,18 @@
         @include h4-header;
         padding: $medium $small;
     }
+
+    @include for-phone-only {
+        &__container {
+            flex-direction: column;
+        }
+    }
 }
 
 .card {
     padding: $large;
     background-color: white;
-    width: 360px;
+    //width: 360px;
     margin: 0 $x-small;
 
     &__image {

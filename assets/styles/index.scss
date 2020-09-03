@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
 
-@import "base/global.scss";
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+@import "base/global.scss";
 @import 'components/nav.scss';
 @import "components/header.scss";
 @import "components/target.scss";

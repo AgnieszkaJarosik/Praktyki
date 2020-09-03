@@ -1,9 +1,29 @@
 .target {
     background-color: $background-color;
     display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: $base auto;
+
+    &__pins {
+        display: none;
+    }
+
+    @include for-tablet-only {
+        padding: $small;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+
+        &__pins {
+            display: flex;
+        }
+    }
 }
 
 .option{
+    width: 25%;
+
     &__header {
         @include h2-header;
     }
@@ -11,17 +31,11 @@
     &__description {
         @include pharagraph-text;
     }
-}
 
-@media only screen and (max-width: 480px) {
-    .target {
-        padding: $small;
-        flex-direction: column;
-    }
-
-    .option {
+    @include for-tablet-only {
         display: none;
         padding: $medium 0;
+        width: 100%;
 
         &__header {
             padding-bottom: $medium;

@@ -38,6 +38,7 @@
     color: $text-color;
     font-size: 17px;
     line-height: 25px;
+    font-weight: 300;
 }
 
 @mixin button {
@@ -86,4 +87,14 @@
     left: -30px;
     border: none;
     margin-left: $x-small;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 480px) { @content; }
+}
+@mixin for-tablet-only {
+    @media (max-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
 }

@@ -1,90 +1,181 @@
 .slides {
     background-color: $background-color;
+    height: 930px;
 
     &__header {
         @include h4-header;
-        padding: $x-large $small $base $small;
-    }
-
-    &__content__description {
-        background-color: $product-color;
-    }
-
-    &__content__description__header{
-        @include big-header(white);
+        padding: $x-large 0 $base 0;
+        width: 65%;
+        margin: 0 auto;
     }
 }
 
-@media only screen and (max-width: 480px) {
+.slides-view {
+    background-image: url("../images/Layer 78.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 510px;
+
+    &__arrows {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 475px;
+        width: 100%;
+    }
+
+    &__image {
+        position: absolute;
+        top: 5px;
+        margin-left: 52%;
+    }
+
+    &__image--mob {
+        display: none;
+    }
+
+    &__image--desc {
+        display: block;
+    }
+}
+
+.arrow-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    height: 70px;
+    width: 70px;
+}
+
+.arrow-button--left {
+    background-image: url("../images/left-arrow.png");
+}
+
+.arrow-button--right {
+    background-image: url("../images/right-arrow.png");
+}
+
+.slides-text {
+    background-color: $product-color;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+    }
+
+    &__header {
+        @include h2-header;
+        color: white;
+        width: 420px;
+        padding: 0;
+        font-size: 45px;
+    }
+
+    &__desc {
+        @include pharagraph-text;
+        color: white;
+        width: 530px;
+        margin-top: $large;
+    }
+}
+
+.slides-text__footer-container {
+    width: 100%;
+    background-color: $product-color;
+    display: flex;
+    justify-content: center;
+}
+
+.slides-text__footer {
+    @include pharagraph-text;
+    background-color: $product-color;
+    color: white;
+    padding: $small 0;
+    border-top: 0.1px dashed white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    width: 420px;
+}
+
+@include for-tablet-only {
     .slides {
-        &__content__background {
-            height: 360px;
-            background-image: url("../images/mob_features_bg.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+        height: auto;
+    }
 
-        &__content-container {
-            position: relative;
-        }
+    .slides-view {
+        height: 360px;
+        background-image: url("../images/mob_features_bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
-        &__content__image {
-            position: absolute;
-            top: 70px;
-            left: 50px;
+        &__image--mob {
             display: block;
-            margin: 0 auto;
         }
 
-        &__content__arrows {
+        &__image--desc {
+            display: none;
+        }
+
+        &__image {
+            top: 70px;
+            margin-left: -2rem;
+        }
+
+        &__arrows {
             display: flex;
             justify-content: space-between;
             position: absolute;
             top: 340px;
             width: 100%;
         }
+    }
 
-        &__content__arrows--left {
-            background-image: url("../images/left-arrow.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            border: none;
-            height: 40px;
-            width: 40px;
+    .slides-text {
+        &__container {
+            width: 90%;
+        }
+    }
+
+    .arrow-button {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@include for-phone-only {
+    .slides-text {
+        &__container {
+            flex-direction: column;
+            width: 100%;
+            height: auto;
         }
 
-        &__content__arrows--right {
-            background-image: url("../images/right-arrow.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            border: none;
-            height: 40px;
-            width: 40px;
-        }
-
-        &__content__description__header{
+        &__header {
             @include big-header(white);
             font-size: 34px;
             padding: $large $small $small $small;
+            width: 100%;
         }
 
-        &__content__description__desc{
+        &__desc {
             @include pharagraph-text;
             color: white;
             padding: $small;
-        }
-
-        &__content__description__footer{
-            @include pharagraph-text;
-            color: white;
-            padding: $small 0;
-            border-top: 0.1px dashed white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            margin-top: 0;
         }
     }
 }

@@ -9,7 +9,7 @@
             padding: $base;
         }
 
-        &--pin {
+        &__item {
             @include pin;
 
             &:hover {

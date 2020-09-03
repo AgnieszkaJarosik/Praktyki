@@ -8,16 +8,16 @@
 <body>
     <menu class="navbar">
         <nav class="navbar__main">
-            <img  class="navbar__logo-image" src="<%= require('../assets/images/logo-mobile.png') %>">
+            <div class="navbar__logo-image"></div>
             <div class="navbar__hamburger-container">
                 <img class="navbar__hamburger" src="<%= require('../assets/images/ex_logo2.png') %>" >
                 <input type="checkbox">
             </div>
-            <ul class="main-nav__items">
+            <ul class="navbar__main__items">
                 <li>Zonifero products</li>
                 <li>Store</li>
                 <li>Blog</li>
-                <li><img src="<%= require('../assets/images/globe.png') %>"></li>
+                <li class="item-globe"><img src="<%= require('../assets/images/globe.png') %>"></li>
                 <li>Sign in</li>
                 <li>Get the app</li>
             </ul>
@@ -28,8 +28,8 @@
                 <img class="navbar__arrow" src="<%= require('../assets/images/down-arrow.png') %>">
                 <input type="checkbox">
             </div>
-            <ul class="minor-nav__items">
-                <li>Overview</li>
+            <ul class="navbar__minor__items">
+                <li class="nav-item-active">Overview</li>
                 <li>Features</li>
                 <li>Specs</li>
                 <li>FAQ</li>
@@ -39,14 +39,14 @@
     </menu>
     <main>
         <section class="header">
-            <h1 class="header__main-header">Streamline your workplace</h1>
             <div class="header__container">
-                <img src="<%= require('../assets/images/mob-hand.png') %>">
+                <h1 class="header__main-header">Streamline <br /> your workplace</h1>
+                <img class="header__image" src="<%= require('../assets/images/mob-hand.png') %>">
             </div>
             <p class="header__description">Effectively and quickly from your mobile device. Staying connected has never been easier.</p>
-            <div>
-                <img>
-                <img>
+            <div class="header__buttons-container">
+                <div class="header__button">Google Play</div>
+                <div class="header__button">App Store</div>
             </div>
         </section>
         <section class="target">
@@ -70,10 +70,10 @@
                     A smooth and welcoming visitor experience – easy navigation around your facilities.
                 </p>
             </div>
-            <ul class="pins">
-                <li><button class="pins--pin pin-active"/></li>
-                <li><button class="pins--pin"/></li>
-                <li><button class="pins--pin"/></li>
+            <ul class="pins target__pins">
+                <li><button class="pins__item pin-active"/></li>
+                <li><button class="pins__item"/></li>
+                <li><button class="pins__item"/></li>
             </ul>
         </section>
         <section class="cards">
@@ -109,39 +109,42 @@
                         so you can make your office more flexible and make the best use of your space.
                 </div>
                 <ul class="pins">
-                    <li><button class="pins--pin pin-active"/></li>
-                    <li><button class="pins--pin"/></li>
-                    <li><button class="pins--pin"/></li>
-                    <li><button class="pins--pin"/></li>
+                    <li><button class="pins__item pin-active"/></li>
+                    <li><button class="pins__item"/></li>
+                    <li><button class="pins__item"/></li>
+                    <li><button class="pins__item"/></li>
                 </ul>
             </div>
         </section>
         <section class="slides">
             <h4 class="slides__header">Features</h4>
             <div class="slides__content-container">
-                <div class="slides__content__background"></div>
-                <img class="slides__content__image" src="<%= require('../assets/images/mob_mobile.png') %>" >
-                <div class="slides__content__arrows">
-                    <button class="slides__content__arrows--left"></button>
-                    <button class="slides__content__arrows--right"></button>
-<!--                    <button class="slides__c2a slides__c2a&#45;&#45;with-border"></button>-->
+                <div class="slides-view">
+                    <img class="slides-view__image slides-view__image--mob" src="<%= require('../assets/images/mob_mobile.png') %>" >
+                    <img class="slides-view__image slides-view__image--desc" src="<%= require('../assets/images/Silver.png') %>" >
+                    <div class="slides-view__arrows">
+                        <button class="arrow-button arrow-button--left"></button>
+                        <button class="arrow-button arrow-button--right"></button>
+                    </div>
                 </div>
-                <div class="slides__content__description">
-                    <h1 class="slides__content__description__header">
-                        Hot desk booking. Like a pro.
-                    </h1>
-                    <p class="slides__content__description__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
-                        Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
-                    </p>
-                    <p class="slides__content__description__footer">View and download full specs</p>
+                <div class="slides-text">
+                    <div class="slides-text__container">
+                        <h2 class="slides-text__header">Hot desk booking. Like a pro.</h2>
+                        <p class="slides-text__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                        </p>
+                    </div>
+                </div>
+                <div class="slides-text__footer-container">
+                    <p class="slides-text__footer">View and download full specs</p>
                 </div>
             </div>
         </section>
         <section class="features">
             <ul class="features__list">
                 <li class="feature">
-                    <div class="feature-container feature-active">
+                    <div class="feature-container">
                         <h3 class="feature__header">Hot-desk booking</h3>
                         <p class="feature__description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
@@ -226,29 +229,29 @@
         </section>
         <section class="form">
             <ul class="form__bookmarks">
-                <li class="form__bookmarks--form">Contact form</li>
-                <li class="form__bookmarks--call">Call us</li>
+                <li class="form__bookmarks__item bookmark-active">Contact form</li>
+                <li class="form__bookmarks__item form__bookmarks__item--second">Call us</li>
             </ul>
             <form class="form__contact">
                 <div class="input-item">
+                    <input class="input-item__field" id="name" type="text" placeholder="First name *" required>
                     <label class="input-item__label" for="name">First name *</label>
-                    <input class="input-item__field" id="name" type="text" placeholder="John">
                 </div>
                 <div class="input-item">
+                    <input class="input-item__field" id="surname" type="text" placeholder="Family name *" required>
                     <label class="input-item__label" for="surname">Family name *</label>
-                    <input class="input-item__field" id="surname" type="text" placeholder="Wick">
                 </div>
                 <div class="input-item">
+                    <input class="input-item__field" id="email" type="email" placeholder="Your email *" required>
                     <label class="input-item__label" for="email">Your email *</label>
-                    <input class="input-item__field" id="email" type="email" placeholder="johnw@hollywood.com">
                 </div>
                 <div class="input-item">
+                    <input class="input-item__field" id="phone" type="number" placeholder="Your phone" required>
                     <label class="input-item__label" for="phone">Your phone</label>
-                    <input class="input-item__field" id="phone" type="number" placeholder="+48 605 708 904">
                 </div>
                 <div class="input-item">
+                    <textarea class="input-item__field" id="message" placeholder="Message *" required></textarea>
                     <label class="input-item__label" for="message">Message *</label>
-                    <textarea class="input-item__field" id="message" placeholder="Hello :) I’m just wondering if you could.." ></textarea>
                 </div>
                 <button class="form__contact__button">Send message</button>
             </form>

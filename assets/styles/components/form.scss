@@ -1,17 +1,92 @@
 .form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
     &__contact__button {
         @include button;
         display: flex;
-
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 
-    @media only screen and (max-width: 480px) {
-        .form {
-            border: 1px solid red;
+    &__bookmarks {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: $large 0;
+    }
 
-            &__contact__button {
-                flex-direction: column;
-            }
+    &__bookmarks__item {
+        @include h4-header;
+    }
+
+    &__bookmarks__item--second {
+        margin-left: $medium;
+    }
+
+    @include for-phone-only{
+        padding: $small;
+
+        &__bookmarks {
+            justify-content: flex-start;
         }
+
+        &__contact__button {
+            flex-direction: column;
+        }
+
+    }
+}
+
+.input-item {
+    position: relative;
+}
+
+.input-item__field {
+    @include description-header;
+    width: 100%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px dashed #2A2A2A;
+    margin: $small 0;
+    height: $large;
+
+    &:focus ~ .input-item__label {
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+
+    &:valid {
+        background-image: url("../images/ptaszek.png");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+.input-item__label {
+    display: none;
+    color: #000000;
+    font-family: $main-font;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+
+.bookmark-active {
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        margin-top: $x-small;
+        display: block;
+        content: "";
+        background-color: #00FFCC;
+        height: 3px;
+        width: 30px;
     }
 }
