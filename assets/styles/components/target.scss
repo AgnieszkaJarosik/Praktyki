@@ -2,8 +2,9 @@
     background-color: $background-color;
     display: flex;
     justify-content: space-between;
-    width: 65%;
-    margin: $base auto;
+    width: 1440px;
+    margin: $large auto;
+    padding: $x-small 0;
 
     &__pins {
         display: none;

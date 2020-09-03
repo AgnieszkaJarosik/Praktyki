@@ -51,6 +51,10 @@
         width: 790px;
         font-family: Roboto;
         font-size: 13px;
+
+        li:hover {
+            cursor: pointer;
+        }
     }
 
     &__minor__items {
@@ -61,6 +65,10 @@
         align-items: center;
         padding-left: $small;
         width: 850px;
+
+        li:hover {
+            cursor: pointer;
+        }
     }
 
     @include for-tablet-only {
@@ -127,6 +135,7 @@
 .nav-item-active {
     font-weight: 700;
     position: relative;
+
 
     &::after {
         position: absolute;

@@ -3,7 +3,7 @@
     flex-direction: column;
 
     &__container {
-        background-image: url("../images/desks2.png");
+        background-image: url("../images/desks.png");
         background-repeat: no-repeat;
         background-position: right;
         display: flex;
@@ -60,6 +60,7 @@
 
     @include for-tablet-only {
        &__container {
+           background-image: url("../images/desks2.png");
            padding-left: 0;
            background-size: contain;
        }

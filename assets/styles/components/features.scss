@@ -4,7 +4,7 @@
 
 .features__list {
     list-style-type: none;
-    width: 65%;
+    width: 1440px;
     margin: $x-large auto 0 auto;
 }
 
@@ -16,6 +16,10 @@
     &__header {
         @include h3-header;
         padding: $small;
+
+        &--active {
+            color: $product-color;
+        }
     }
 
     &__image {
@@ -43,11 +47,4 @@
             padding: $small;
         }
     }
-
-    .feature-active {
-        p {
-            display: block;
-        }
-    }
-
 }

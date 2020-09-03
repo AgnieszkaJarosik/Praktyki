@@ -11,7 +11,7 @@
 }
 
 .slides-view {
-    background-image: url("../images/Layer 78.png");
+    background-image: url("../images/office_1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -64,13 +64,14 @@
     background-color: $product-color;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 300px;
+
 
     &__container {
-        width: 65%;
+        width: 1440px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        height: 300px;
     }
 
     &__header {
@@ -84,7 +85,7 @@
     &__desc {
         @include pharagraph-text;
         color: white;
-        width: 530px;
+        width: 500px;
         margin-top: $large;
     }
 }
@@ -112,6 +113,10 @@
 @include for-tablet-only {
     .slides {
         height: auto;
+
+        &__content-container {
+            width: 100%;
+        }
     }
 
     .slides-view {

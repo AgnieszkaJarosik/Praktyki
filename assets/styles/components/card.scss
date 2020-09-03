@@ -1,9 +1,9 @@
 .cards {
-    background-color: $background-color;
+    width: 1440px;
+    margin: 0 auto;
 
     &__container {
         display: flex;
-        background-color: white;
     }
 
     &__description {
@@ -12,6 +12,7 @@
     }
 
     @include for-phone-only {
+        width: 100%;
         &__container {
             flex-direction: column;
         }
@@ -21,7 +22,7 @@
 .card {
     padding: $large;
     background-color: white;
-    //width: 360px;
+    width: 310px;
     margin: 0 $x-small;
 
     &__image {
@@ -38,21 +39,28 @@
     &__description {
         @include pharagraph-text;
     }
-}
 
-@media only screen and (max-width: 480px) {
-    .card {
+    @include for-phone-only {
+        width: 100%;
         display: none;
         padding: $small;
         margin: 0;
 
-
         &__header {
             padding: $small 0;
+        }
+
+        &--active {
+            display: block;
         }
     }
 }
 
-.active {
-    display: block;
+.cards-pins {
+    background-color: white;
+    display: none;
+
+    @include for-phone-only {
+        display: block;
+    }
 }

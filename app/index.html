@@ -79,7 +79,7 @@
         <section class="cards">
             <h4 class="cards__description">Problem solving app</h4>
             <div class="cards__container">
-                <div class="card active">
+                <div class="card card--active">
                     <img class="card__image" src="<%= require('../assets/images/desk_icon.png') %>">
                     <h3 class="card__header">Use your time and space smarter</h3>
                     <p class="card__description">
@@ -102,13 +102,13 @@
                 </div>
                 <div class="card">
                     <img class="card__image" src="<%= require('../assets/images/desk_icon.png') %>">
-                    <h3 class="card__header">Save your desk and room space</h3>
+                    <h3 class="card__header">Save your desk and room space</h3>
                     <p class="card__description">
                         Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.
                         Zonifero will tell you which desks and rooms are in use and how many and which of them are idle,
                         so you can make your office more flexible and make the best use of your space.
                 </div>
-                <ul class="pins">
+                <ul class="pins cards-pins">
                     <li><button class="pins__item pin-active"/></li>
                     <li><button class="pins__item"/></li>
                     <li><button class="pins__item"/></li>
@@ -117,8 +117,7 @@
             </div>
         </section>
         <section class="slides">
-            <h4 class="slides__header">Features</h4>
-            <div class="slides__content-container">
+                <h4 class="slides__header">Features</h4>
                 <div class="slides-view">
                     <img class="slides-view__image slides-view__image--mob" src="<%= require('../assets/images/mob_mobile.png') %>" >
                     <img class="slides-view__image slides-view__image--desc" src="<%= require('../assets/images/Silver.png') %>" >
@@ -145,7 +144,7 @@
             <ul class="features__list">
                 <li class="feature">
                     <div class="feature-container">
-                        <h3 class="feature__header">Hot-desk booking</h3>
+                        <h3 class="feature__header ">Hot-desk booking</h3>
                         <p class="feature__description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
                             Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
@@ -158,7 +157,7 @@
                         <h3 class="feature__header">Status of employees</h3>
                         <p class="feature__description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
-                            Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
+                            Fusce eget purus aliquet libero euismod blandit sed eu enim.
                         </p>
                         <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
                     </div>
@@ -167,7 +166,7 @@
                     <div class="feature-container">
                         <h3 class="feature__header">Request management</h3>
                         <p class="feature__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
                         </p>
                         <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
@@ -177,7 +176,7 @@
                     <div class="feature-container">
                         <h3 class="feature__header">Hot-desk booking</h3>
                         <p class="feature__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Sed tristique velit id finibus convallis.
                             Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
                         </p>
                         <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
@@ -187,7 +186,7 @@
                     <div class="feature-container">
                         <h3 class="feature__header">Status of employees</h3>
                         <p class="feature__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Finibus convallis.
                             Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
                         </p>
                         <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
@@ -197,7 +196,7 @@
                     <div class="feature-container">
                         <h3 class="feature__header">Request management</h3>
                         <p class="feature__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Fusce eget purus aliquet libero euismod blandit sed eu enim. Curabitur eget arcu ut augue.
                         </p>
                         <img class="feature__image" src="<%= require('../assets/images/down-arrow.png') %>">
@@ -206,24 +205,44 @@
             </ul>
         </section>
         <section class="ecosystem">
-            <h1 class="ecosystem__header">Zoptymalizuj koszty i ergonomię biura z Zonifero</h1>
-            <p class="ecosystem__description">
-                Zarządzaj świadomie rozwojem biura, optymalizuj koszty związane z usługami i powierzchnią
-                a także podnoś komfort pracy dzięki jednemu systemowi.
-            </p>
-            <img class="ecosystem__image" src="<%= require('../assets/images/mob_devices copy.png') %>">
-            <h2 class="ecosystem__second-header">523%</h2>
-            <p class="ecosystem__pharagraph">
-                Długoterminowe korzyści z wdrożenia Zonifero wynoszą co najmniej 523%* w stosunku do wydanej kwoty.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor sem sit amet purus maximus, eu fringilla orci rhoncus.
-                * Wyliczenia są zależne od lokalizacji biura
-            </p>
+            <div class="ecosystem__first-section">
+                <div class="ecosystem__container">
+                    <h1 class="ecosystem__header">Zoptymalizuj koszty i ergonomię biura z Zonifero</h1>
+                    <p class="ecosystem__description">
+                        Zarządzaj świadomie rozwojem biura, optymalizuj koszty związane z usługami i powierzchnią
+                        a także podnoś komfort pracy dzięki jednemu systemowi.
+                    </p>
+                </div>
+                <img class="ecosystem__image ecosystem__image--desc" src="<%= require('../assets/images/devices.png') %>">
+                <img class="ecosystem__image ecosystem__image--mob" src="<%= require('../assets/images/mob_devices copy.png') %>">
+            </div>
+            <div class="ecosystem__container ecosystem__container--second">
+                <div class="ecosystem__second-section">
+                    <h2 class="ecosystem__second-header">523%</h2>
+                    <p class="ecosystem__pharagraph">
+                        Długoterminowe korzyści z wdrożenia Zonifero wynoszą co najmniej 523%* w stosunku do wydanej kwoty.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor sem sit amet purus maximus, eu fringilla orci rhoncus.
+                        * Wyliczenia są zależne od lokalizacji biura
+                    </p>
+                </div>
+                <div class="ecosystem__second-section ecosystem__second-section--inactive">
+                    <h2 class="ecosystem__second-header">320+</h2>
+                    <p class="ecosystem__pharagraph">
+                        Długoterminowe korzyści z wdrożenia Zonifero wynoszą co najmniej 523%* w stosunku do wydanej kwoty.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor sem sit amet purus maximus,
+                        eu fringilla orci rhoncus.
+                        * Wyliczenia są zależne od lokalizacji biura
+                    </p>
+                </div>
+            </div>
         </section>
         <section class="store">
-            <h2 class="store__header">Shop zonifero accesories</h2>
-            <p class="store__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim felis id nisl egestas.
-            </p>
+            <div class="store__container">
+                <h2 class="store__header">Shop zonifero accesories</h2>
+                <p class="store__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim felis id nisl egestas.
+                </p>
+            </div>
             <img class="store__image" src="<%= require('../assets/images/mob_starter kit.png') %>">
             <button class="store__button">Contact us</button>
         </section>
@@ -233,6 +252,7 @@
                 <li class="form__bookmarks__item form__bookmarks__item--second">Call us</li>
             </ul>
             <form class="form__contact">
+                <div class="form__container">
                 <div class="input-item">
                     <input class="input-item__field" id="name" type="text" placeholder="First name *" required>
                     <label class="input-item__label" for="name">First name *</label>
@@ -249,11 +269,12 @@
                     <input class="input-item__field" id="phone" type="number" placeholder="Your phone" required>
                     <label class="input-item__label" for="phone">Your phone</label>
                 </div>
-                <div class="input-item">
+                <div class="input-item input-item--textarea">
                     <textarea class="input-item__field" id="message" placeholder="Message *" required></textarea>
                     <label class="input-item__label" for="message">Message *</label>
                 </div>
                 <button class="form__contact__button">Send message</button>
+                </div>
             </form>
         </section>
     </main>
